@@ -1,0 +1,11 @@
+name: Prueba de ejecución de Python
+run-name: Script de python en ubuntu
+on: [push]
+steps:
+  Ejecuta-Scripts-Python:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Inicia action"
+      - run: python --version
+      - run: ls -al
+      - run: python app.py
