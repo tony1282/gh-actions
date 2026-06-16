@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: echo "Inicia actions"
       - run: python --version
-      - run: Check out repository code
-      - run: actions/chekout@v6
+      - name: Check out repository code
+        uses: actions/chekout@v6
       - run: ls -al
       - run: app.py
