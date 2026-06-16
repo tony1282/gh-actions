@@ -10,4 +10,4 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v6
       - run: ls -al
-      - run: python .github/workflows/app.py
+      - run: python gh-actions/.github/workflows/app.py
