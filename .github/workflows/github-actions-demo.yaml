@@ -12,11 +12,11 @@ jobs:
 
       - run: echo "Hellooo world"
 
-      - run: echo "Escribo en un archivo de texto" > file.txt
+      - run: echo "Escribo en un archivo de texto" > file.txt 
 
       - run: ls -al
 
-      - run: cat file.txt
+      - run: cat file.txt   
 
       - run: rm -rf file.txt
 
