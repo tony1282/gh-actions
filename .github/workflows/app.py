@@ -1,12 +1,2 @@
-print("Hello world!")
+print("Hello world to 10 PM!")
 
-lista = [{
-    "name": "John",
-
-    "age": 30,
-
-    "city": "New York"
-}]
-
-for l in lista:
-    print(l['name'])

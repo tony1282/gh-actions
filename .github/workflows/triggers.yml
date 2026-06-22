@@ -1,0 +1,40 @@
+name: Event Triggers
+run-name: Event Triggers
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'gh-actions/**'
+      - 'app.py'
+
+  workflow_dispatch:
+
+  issues:
+    types: [opened, edited, closed]
+
+
+  schedule:
+    - cron: "0 16 * * *"
+    - cron: "0 15 * * *"   
+
+jobs:
+  execute-script-python:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Inicia actions"
+
+      - run: python --version
+
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - run: ls -al   
+
+      - name: Ejecutar script
+        run: python gh-actions/app.py
+        
+
+      
+      
+
