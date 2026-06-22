@@ -32,4 +32,4 @@ jobs:
       - run: ls -al   
 
       - name: Ejecutar script
-        run: python .github/workflows/app.py   # 👈 ruta corregida
+        run: python .github/workflows/app.py 
