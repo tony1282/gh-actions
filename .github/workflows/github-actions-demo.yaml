@@ -10,20 +10,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Hello World
-        run: echo "Hellooo world"
+      - run: echo "Hellooo world"
 
-      - name: Crear archivo
-        run: echo "Escribo en un archivo de texto" > file.txt
+      - run: echo "Escribo en un archivo de texto" > file.txt 
 
-      - name: Listar archivos (antes de leer)
-        run: ls -al
+      - run: ls -al                                             
 
-      - name: Leer archivo
-        run: cat file.txt
+      - run: cat file.txt 
 
-      - name: Eliminar archivo
-        run: rm -rf file.txt
+      - run: rm -rf file.txt   
 
-      - name: Listar archivos (después de eliminar)
-        run: ls -al
+      - run: ls -al  
