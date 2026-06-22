@@ -1,6 +1,7 @@
 name: Prueba ejecucion de Script
 run-name: Script de Python en ubuntu
 on: [push]
+
 jobs:
   execute-script-python:
     runs-on: ubuntu-latest
@@ -8,6 +9,7 @@ jobs:
       - run: echo "Inicia actions"
       - run: python --version
       - name: Check out repository code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
       - run: ls -al
-      - run: python gh-actions/.github/workflows/app.py
+      - run: python gh-actions/app.py
+
