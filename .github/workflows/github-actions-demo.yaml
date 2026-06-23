@@ -21,11 +21,3 @@ jobs:
       - run: rm -rf file.txt   
 
       - run: ls -al
-
-      - run: |
-          echo "The job is done"
-          echo "USERNAME = ${{ github.actor }}" >> $GITHUB_ENV
-
-      - run: echo $PATH
-
-      - run: python .github/workflows/app.py

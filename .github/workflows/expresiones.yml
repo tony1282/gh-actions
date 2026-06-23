@@ -1,0 +1,19 @@
+name: "Expresiones"
+run-name: "Expresiones"
+
+
+on:
+  execute-script-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: correr script
+        run: echo ${{ inputs.nombre }} es menor de edad
+    ejecuta-pythoon-condiconales:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo $ EDAD=${{ inputs.edad }} >> $GITHUB_ENV
+        - run: echo "NAME=${{ inputs.nombre }}" >> $GITHUB_ENV
+        - uses: actions/checkout@v4
+        - run: echo "Inicia actions"
+
+ 
