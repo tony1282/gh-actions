@@ -1,19 +1,29 @@
-name: "Expresiones"
-run-name: "Expresiones"
-
+name: Expresiones
+run-name: Expresiones
 
 on:
+  workflow_dispatch:
+    inputs:
+      nombre:
+        description: "Nombre de la persona"
+        required: true
+        default: "Antony"
+      edad:
+        description: "Edad de la persona"
+        required: true
+        default: "17"
+
+jobs:
   execute-script-python:
     runs-on: ubuntu-latest
     steps:
-      - name: correr script
-        run: echo ${{ inputs.nombre }} es menor de edad
-    ejecuta-pythoon-condiconales:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo $ EDAD=${{ inputs.edad }} >> $GITHUB_ENV
-        - run: echo "NAME=${{ inputs.nombre }}" >> $GITHUB_ENV
-        - uses: actions/checkout@v4
-        - run: echo "Inicia actions"
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
- 
+      - name: Exportar variables
+        run: |
+          echo "USERNAME=${{ github.event.inputs.nombre }}" >> $GITHUB_ENV
+          echo "EDAD=${{ github.event.inputs.edad }}" >> $GITHUB_ENV
+
+      - name: Ejecutar script
+        run: python .github/workflows/condicionales.py
