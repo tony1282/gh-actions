@@ -21,10 +21,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Exportar variables
-        run: |
-          echo "USERNAME=${{ inputs.nombre }}" >> $GITHUB_ENV
-          echo "EDAD=${{ inputs.edad }}" >> $GITHUB_ENV
-
       - name: Ejecutar script
         run: python condicionales.py
+        env:
+          USERNAME: ${{ github.event.inputs.nombre || 'Antony' }}
+          EDAD: ${{ github.event.inputs.edad || '17' }}
