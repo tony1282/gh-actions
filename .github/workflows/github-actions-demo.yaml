@@ -20,4 +20,4 @@ jobs:
 
       - run: rm -rf file.txt   
 
-      - run: ls -al  
+      - run: ls -al
