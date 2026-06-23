@@ -26,4 +26,4 @@ jobs:
           echo "EDAD=${{ github.event.inputs.edad }}" >> $GITHUB_ENV
 
       - name: Ejecutar script
-        run: python .github/workflows/condicionales.py
+        run: python condicionales.py
