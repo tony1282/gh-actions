@@ -2,6 +2,7 @@ name: Expresiones
 run-name: Expresiones
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       nombre:
