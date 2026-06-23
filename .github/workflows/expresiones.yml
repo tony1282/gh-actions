@@ -23,8 +23,8 @@ jobs:
 
       - name: Exportar variables
         run: |
-          echo "USERNAME=${{ github.event.inputs.nombre }}" >> $GITHUB_ENV
-          echo "EDAD=${{ github.event.inputs.edad }}" >> $GITHUB_ENV
+          echo "USERNAME=${{ inputs.nombre }}" >> $GITHUB_ENV
+          echo "EDAD=${{ inputs.edad }}" >> $GITHUB_ENV
 
       - name: Ejecutar script
         run: python condicionales.py
